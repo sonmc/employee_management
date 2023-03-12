@@ -49,7 +49,7 @@ export class User extends BaseEntity {
     @OneToMany(() => Workload, (workload) => workload.user, {
         eager: true,
     })
-    workloads: Workload[] = [];
+    workloads: Workload[];
 
     @ManyToMany(() => Role, (role) => role.users)
     @JoinTable({
@@ -57,7 +57,7 @@ export class User extends BaseEntity {
         joinColumn: { name: 'user_id', referencedColumnName: 'id' },
         inverseJoinColumn: { name: 'role_id' },
     })
-    roles: Role[] = [];
+    roles: Role[];
 
     @ManyToMany(() => Project, (project) => project.users)
     @JoinTable({
@@ -65,7 +65,7 @@ export class User extends BaseEntity {
         joinColumn: { name: 'user_id', referencedColumnName: 'id' },
         inverseJoinColumn: { name: 'project_id' },
     })
-    projects: Project[] = [];
+    projects: Project[];
 
     @ManyToMany(() => Vacation, (v) => v.users)
     @JoinTable({
@@ -73,7 +73,7 @@ export class User extends BaseEntity {
         joinColumn: { name: 'user_id', referencedColumnName: 'id' },
         inverseJoinColumn: { name: 'vacation_id' },
     })
-    vacations: Vacation[] = [];
+    vacations: Vacation[];
 
     @ManyToMany(() => Task, (v) => v.users)
     @JoinTable({
@@ -81,7 +81,7 @@ export class User extends BaseEntity {
         joinColumn: { name: 'user_id', referencedColumnName: 'id' },
         inverseJoinColumn: { name: 'task_id' },
     })
-    tasks: Task[] = [];
+    tasks: Task[];
 
     @ManyToMany(() => Kanban, (v) => v.users)
     @JoinTable({
@@ -89,5 +89,5 @@ export class User extends BaseEntity {
         joinColumn: { name: 'user_id', referencedColumnName: 'id' },
         inverseJoinColumn: { name: 'kanban_id' },
     })
-    kanbans: Kanban[] = [];
+    kanbans: Kanban[];
 }

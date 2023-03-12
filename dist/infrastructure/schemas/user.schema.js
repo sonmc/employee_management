@@ -18,7 +18,7 @@ const workload_schema_1 = require("./workload.schema");
 const vacation_schema_1 = require("./vacation.schema");
 const kanban_schema_1 = require("./kanban.schema");
 const task_schema_1 = require("./task.schema");
-const bcrypt_service_1 = require("use-case/services/bcrypt.service");
+const bcrypt_service_1 = require("../services/bcrypt.service");
 let User = class User extends base_schema_1.BaseEntity {
     constructor() {
         super(...arguments);

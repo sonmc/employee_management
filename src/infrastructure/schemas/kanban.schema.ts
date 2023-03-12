@@ -12,7 +12,7 @@ export class Kanban extends BaseEntity {
     @OneToMany(() => KanbanColumn, (k) => k.kanban, {
         eager: true,
     })
-    kanban_columns: KanbanColumn[] = [];
+    kanban_columns: KanbanColumn[];
 
     @ManyToMany(() => User, (users) => users.kanbans)
     @JoinTable({
@@ -20,7 +20,7 @@ export class Kanban extends BaseEntity {
         joinColumn: { name: 'kanban_id', referencedColumnName: 'id' },
         inverseJoinColumn: { name: 'user_id' },
     })
-    users: User[] = [];
+    users: User[];
 
     @ManyToOne(() => Project, (p) => p.kanbans)
     project: Project = new Project();
