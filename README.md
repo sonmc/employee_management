@@ -1,12 +1,7 @@
 # Hello, There
 
-This is most simple project structure for NodeJs and TypeORM configuration with `ormconfig.ts` extension.
-
-## Stackoverflow
-
-Checkout this answer on stackoverflow at:
-[https://stackoverflow.com/questions/52187328/how-to-specify-ormconfig-ts-for-typeorm](https://stackoverflow.com/questions/52187328/how-to-specify-ormconfig-ts-for-typeorm)
-
+This is most simple project structure for Koajs and TypeORM configuration with `ormconfig.ts` extension.
+ 
 ## Project Structure
 
 ```txt

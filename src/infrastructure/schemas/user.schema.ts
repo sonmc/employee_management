@@ -6,7 +6,7 @@ import { Workload } from './workload.schema';
 import { Vacation } from './vacation.schema';
 import { Kanban } from './kanban.schema';
 import { Task } from './task.schema';
-import { hash } from 'use-case/services/bcrypt.service';
+import { hash } from '../services/bcrypt.service';
 
 @Entity({ name: 'users' })
 export class User extends BaseEntity {
